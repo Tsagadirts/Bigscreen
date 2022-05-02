@@ -23,3 +23,6 @@ Route::get('/', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/sondage', [App\Http\Controllers\QuestionaireController::class, 'sondage'])->name('sondage');
+
+// route page admin 
+Route::get('/admin/products', [ProductController::class, 'adminIndex'])->name('admin');
