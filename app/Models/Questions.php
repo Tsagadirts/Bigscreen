@@ -9,8 +9,14 @@ class Questions extends Model
 {
     use HasFactory;
     protected $guarded = ['id']; 
+    // protected $casts = [
+    //     'options' => 'array'
+    // ];
 
 public function answers(){
     return $this->hasMany(Answers::class);
-}     
+}    
+
+
+
 }
