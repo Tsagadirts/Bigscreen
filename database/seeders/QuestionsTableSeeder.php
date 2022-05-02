@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Answers;
+use App\Models\Questions;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class AnswerTableSeeder extends Seeder
+class QuestionsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +15,10 @@ class AnswerTableSeeder extends Seeder
      */
     public function run()
     {
-        Answers::factory()->count(20)->create();
+        $question = new Questions;
+        $question->title = '';
+        $question->body = '';
+        $question->question_type = 'b';
+        $question->save();
     }
 }

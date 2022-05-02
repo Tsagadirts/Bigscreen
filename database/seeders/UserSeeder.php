@@ -2,6 +2,10 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Support\Facades\Hash;
+use Database\Factories\UserFactory;
+use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
