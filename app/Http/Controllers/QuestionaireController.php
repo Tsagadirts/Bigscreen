@@ -11,4 +11,18 @@ class QuestionaireController extends Controller
         // on va appeler les différents products
         return view('users.sondage', ['questions' => Questions::all()]);  
     }
+
+
+
+
+
+
+
+    /********************************************* Admin Controller *******************************************/
+
+    public function statistic(){
+        // on fait appel au questionnaire
+        return view('admin.statistic');  
+    }
+
 }
