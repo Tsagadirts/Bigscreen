@@ -1,13 +1,12 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Questions;
+
+use App\Models\Answers;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Symfony\Component\Console\Question\Question;
 
-
-class QuestionTableSeeder extends Seeder
+class AnswersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,6 +15,5 @@ class QuestionTableSeeder extends Seeder
      */
     public function run()
     {
-        Questions::factory()->count(20)->create();
     }
 }
