@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
-            $table->integer('question_id')->unsigned()->index();
+            $table->unsignedBigInteger('question_id')->index();
+            $table->unsignedBigInteger('surveyed_id');
             $table->string('answer');
             $table->timestamps();
         });

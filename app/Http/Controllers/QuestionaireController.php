@@ -20,9 +20,9 @@ class QuestionaireController extends Controller
 
     /********************************************* Admin Controller *******************************************/
 
-    public function statistic(){
+    public function index(){
         // on fait appel au questionnaire
-        return view('admin.statistic');  
+        return view('admin.index');  
     }
 
 }

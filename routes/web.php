@@ -32,9 +32,9 @@ Route::get('/sondage', [App\Http\Controllers\QuestionaireController::class, 'son
 // page dashboard
 Auth::routes();
 
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'statistic'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/question', [App\Http\Controllers\HomeController::class, 'questions'])->name('question');
 
