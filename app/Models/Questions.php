@@ -15,12 +15,5 @@ class Questions extends Model
 
 public function answers(){
     return $this->hasMany(Answers::class);
-<<<<<<< HEAD
-}    
-
-
-
-=======
     }     
->>>>>>> admin
 }
