@@ -5,12 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Answers extends Model
+class Question extends Model
 {
     use HasFactory;
     protected $guarded = ['id']; 
+    protected $casts = [
+        'options' => 'array'
+    ];
 
-public function questions(){
-    return $this->belongsTo(Questions::class);
+public function answers(){
+    return $this->hasMany(Answers::class);
 }    
+
+
+
 }

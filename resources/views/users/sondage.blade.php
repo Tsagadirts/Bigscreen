@@ -6,23 +6,12 @@
     <label for="">{{ $question->title }}</label>
     <label for="">{{ $question->body }}</label>
     @if ($question->question_type=='a')
-         {{-- @foreach($question->options as $option)
+         @foreach($question->options as $option)
           <p>{{$option}}</p>
-         @endforeach --}}
+         @endforeach
+
          {{-- <p>{{$question->options}}</p> --}}
-         
-          
-         
-         
-
-
-
-
-
-
-
-
-
+    
     @elseif($question->question_type=='b')
       <div>
             <input type="email">
