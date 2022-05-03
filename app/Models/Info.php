@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Info extends Model
 {
     use HasFactory;
-    protected $guarded = ['id']; 
+
 
     public function answer(){
         return $this->belongsTo(Answers::class);

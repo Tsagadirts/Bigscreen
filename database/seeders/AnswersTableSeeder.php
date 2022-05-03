@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Answers;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,5 +14,6 @@ class AnswersTableSeeder extends Seeder
      */
     public function run()
     {
+        //
     }
 }
