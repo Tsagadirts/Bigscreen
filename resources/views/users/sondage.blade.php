@@ -6,7 +6,7 @@
     <label for="">{{ $question->title }}</label>
     <label for="">{{ $question->body }}</label>
     @if ($question->question_type=='a')
-         @foreach($question->options as $option)
+         @foreach(explode(',',$question->options) as $option)
           <p>{{$option}}</p>
          @endforeach
 

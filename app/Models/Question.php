@@ -9,9 +9,9 @@ class Question extends Model
 {
     use HasFactory;
     protected $guarded = ['id']; 
-    protected $casts = [
-        'options' => 'array'
-    ];
+    // protected $casts = [
+    //     'options' => 'array'
+    // ];
 
 public function answers(){
     return $this->hasMany(Answer::class);
