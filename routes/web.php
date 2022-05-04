@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionaireController;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -37,10 +39,10 @@ Route::get('/sondage', [App\Http\Controllers\QuestionaireController::class, 'son
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/statistic', [App\Http\Controllers\QuestionaireController::class, 'statistic'])->name('statistic');
+Route::get('/statistic', [QuestionaireController::class, 'statistic'])->name('statistic');
 
-Route::get('/answers', [App\Http\Controllers\HomeController::class, 'answers'])->name('answers');
+Route::get('/answers', [HomeController::class, 'answers'])->name('answers');
 
 

@@ -2,7 +2,8 @@
 
     <head>
         <title>Bigscreen</title>
-        <link rel="stylesheet" href="{{ mix('/css/app.css') }}" />
+        <link rel="stylesheet" href="{{ mix('/css/app.css') }}" >
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 
     <body>
@@ -12,7 +13,7 @@
  
         <div class="container">
             <nav>
-                @include('menu.admin')
+                @include('menu.menu_admin')
             </nav>
             @yield('content')
         </div>

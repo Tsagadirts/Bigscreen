@@ -25,9 +25,4 @@ class QuestionaireController extends Controller
         return view('admin.statistic');  
     }
 
-    public function dashboard(){
-        // on fait appel au questionnaire
-        return view('admin.statistic');  
-    }
-
 }

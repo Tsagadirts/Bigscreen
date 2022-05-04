@@ -1,22 +1,22 @@
-@extends("layouts.app")
 @extends('layouts.master')
-
+@extends('layouts.app')
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" 
 integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" 
-crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
 
 <div class="myChart">
-<canvas id="myChart" width="400" height="400"></canvas>
+<canvas id="myChart"></canvas>
 <script>
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'pie',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Red', 'Blue', 'Yellow'],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [6,7,10],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
