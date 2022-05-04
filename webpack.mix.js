@@ -13,4 +13,8 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .vue()
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+
+    .css('resources/css/app.css', 'public/css')
+    // éviter que le navigateur nous sert une version mise en cache de JavaScript et CSS,
+    .version();

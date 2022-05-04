@@ -30,13 +30,16 @@ Route::get('/sondage', [App\Http\Controllers\QuestionaireController::class, 'son
 
 /******************************************** Route Admin ****************************************************/
 // page dashboard
-Auth::routes();
 
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
+// Route::get('/home', function () {
+//     return view('home');
+// })->middleware(['auth'])->name('home');
+
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/question', [App\Http\Controllers\HomeController::class, 'questions'])->name('question');
+Route::get('/statistic', [App\Http\Controllers\QuestionaireController::class, 'statistic'])->name('statistic');
 
 Route::get('/answers', [App\Http\Controllers\HomeController::class, 'answers'])->name('answers');
 

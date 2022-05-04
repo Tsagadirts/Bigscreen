@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
@@ -15,9 +16,6 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    <nav>
-                        @include('menu.admin')
-                    </nav> 
                 </div>
             </div>
         </div>
