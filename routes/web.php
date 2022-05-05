@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChartJsController;
 use App\Http\Controllers\QuestionaireController;
 
 /*
@@ -23,9 +24,12 @@ Route::get('/', function () {
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/sondage', [App\Http\Controllers\QuestionaireController::class, 'sondage'])->name('sondage');
-
+Route::post('/results', [QuestionaireController::class, 'results'])->name('results');
 // route page admin 
 // Route::get('/admin/products', [ProductController::class, 'adminIndex'])->name('admin');
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/statistic', [ChartJsController::class, 'statistic'])->name('statistic');
+

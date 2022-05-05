@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title', 100);
             $table->string('body');
             $table->string('question_type');
-            $table->string('options');
+            $table->json('options');
             $table->timestamps();
         });
     }

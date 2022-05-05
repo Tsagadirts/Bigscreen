@@ -1,45 +1,39 @@
 @extends('layouts.master')
 
-<form method="POST" action="/profile">
+<form method="POST" action="/results">
     @csrf
     @foreach ($questions as $question)
-    <label for="">{{ $question->title }}</label>
-    <label for="">{{ $question->body }}</label>
-    @if ($question->question_type=='a')
-         @foreach(explode(',',$question->options) as $option)
-          <p>{{$option}}</p>
-         @endforeach
+    <p class="text-justify" >{{ $question->title }}</p>
+     @if ($question->question_type=='a')
+      <div>
+          <label for="{{ $question->id }}">{{ $question->body }}</label>
+          <select name="{{ $question->id }}" id="{{ $question->id }}" class="form-select" aria-label="Floating label select example">
+              @foreach($question->options as $option)
+              <option value="{{$option}}">
+                {{$option}}
+              </option>
+              @endforeach
+          </select>
+        </div>
+         
 
          {{-- <p>{{$question->options}}</p> --}}
     
     @elseif($question->question_type=='b')
       <div>
-            <input type="email">
+          <label for="{{ $question->id }}">{{ $question->body }}</label>
+            <input type="text" name="{{ $question->id }}" id="{{ $question->id }}">
       </div>    
     @else
     <div>
-        <input type="radio" id="contactChoice1"
-         name="choice" value="1">
-        <label for="contactChoice1">1</label>
-    
-        <input type="radio" id="contactChoice2"
-         name="choice" value="2">
-        <label for="contactChoice2">2</label>
-    
-        <input type="radio" id="contactChoice3"
-         name="choice" value="3">
-        <label for="contactChoice3">3</label>
-
-        <input type="radio" id="contactChoice3"
-         name="choice" value="4">
-        <label for="contactChoice4">4</label>
-
-        <input type="radio" id="contactChoice3"
-         name="choice" value="5">
-        <label for="contactChoice5">5</label>
+      @for ($i = 1; $i<=5; $i++)
+        <input type="radio" id="{{ $question->id }}"
+         name="{{ $question->id }}" value="{{$i}}">
+        <label for="{{ $question->id }}">{{$i}}</label>
+      @endfor
       </div>
     @endif
 
     @endforeach
-
+    <input type="submit" value="submit">
 </form>

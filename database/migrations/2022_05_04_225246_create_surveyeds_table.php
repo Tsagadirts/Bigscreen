@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('surveyed', function (Blueprint $table) {
+        Schema::create('surveyeds', function (Blueprint $table) {
             $table->id();
             $table->string('user_email')->unique();
-            $table->rememberToken();
+            $table->string('token');
             $table->timestamps();
         });
     }
@@ -28,6 +28,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('surveyed');
+        Schema::dropIfExists('surveyeds');
     }
 };
+
+
+

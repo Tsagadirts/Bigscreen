@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('question_id')->index();
             $table->unsignedBigInteger('surveyed_id');
+            $table->string('answer');
             $table->timestamps();
         });
     }
