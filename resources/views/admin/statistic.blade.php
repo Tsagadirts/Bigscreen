@@ -1,34 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Laravel 8 Chart JS Example Tutorial - Pie Chart - Tutsmake.com</title>
-  <!-- Latest CSS -->
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
-</head>
-<body>
-  <div class="chart-container">
-    <div class="pie-chart-container">
-      <canvas id="pie-chart"></canvas>
-    </div>
-  </div>
- 
-  <!-- javascript -->
- 
-   <script>
-  $(function(){
-      //get the pie chart canvas
-      var cData = JSON.parse(`<?php echo $chart_data; ?>`);
-      var ctx = $("#pie-chart");
- 
-      //pie chart data
-      var data = {
-        labels: cData.label,
-        datasets: [
-          {
-            label: "Users Count",
-            data: cData.data,
+@extends('layouts.master')
+@extends('layouts.app')
+
+@section("content")
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" 
+integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" 
+crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> --}}
+
+<div class="myChart">
+<canvas id="myChart" width="400" height="400"></canvas>
+<script>
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow'],
+        datasets: [{
+            label: '# of Votes',
+            data: [6,7,10],
             backgroundColor: [
               "#DEB887",
               "#A9A9A9",
@@ -81,5 +72,5 @@
  
   });
 </script>
-</body>
-</html>
+</div>
+@endsection

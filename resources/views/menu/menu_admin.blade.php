@@ -1,5 +1,5 @@
 <div class="menu_admin">
-    <a href="{{-- route("product.product.index") --}}">
+    <a href="{{ route("statistic") }}">
         <span>Accueil</span>
     </a> 
     <a href="{{-- route("dashboard") --}}">
@@ -7,5 +7,8 @@
     </a>
     <a href="{{-- route("sold") --}}">
         <span>Réponses</span>
+    </a>
+    <a href="{{ route("home") }}">
+        <span>Dashboard</span>
     </a>
 </div>
