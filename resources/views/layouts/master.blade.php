@@ -3,7 +3,6 @@
     <head>
         <title>Bigscreen</title>
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}" >
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 
     <body>
