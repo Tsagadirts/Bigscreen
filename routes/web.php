@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChartJsController;
 use App\Http\Controllers\QuestionaireController;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +32,25 @@ Route::post('/message',[QuestionaireController::class, 'message'])->name('messag
 Route::get('/result/{token}', [QuestionaireController::class, 'result'])->name('result');
 // route page admin 
 // Route::get('/admin/products', [ProductController::class, 'adminIndex'])->name('admin');
+
+
+
+/******************************************** Route Admin ****************************************************/
+// page dashboard
+
+// Route::get('/home', function () {
+//     return view('home');
+// })->middleware(['auth'])->name('home');
+
 Auth::routes();
 
 
 
 Route::get('/statistic', [ChartJsController::class, 'statistic'])->name('statistic');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::get('/statistic', [QuestionaireController::class, 'statistic'])->name('statistic');
+
+Route::get('/answers', [HomeController::class, 'answers'])->name('answers');
+
 

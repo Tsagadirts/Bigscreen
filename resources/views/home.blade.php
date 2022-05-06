@@ -15,9 +15,18 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    <nav>
-                        @include('menu.admin')
-                    </nav> 
+
+                    <nav class="nav_bar">
+                        <a href="{{ route("statistic") }}">
+                            <span>Accueil</span>
+                        </a> 
+                        <a href="{{-- route("dashboard") --}}">
+                            <span>Questions</span>
+                        </a>
+                        <a href="{{-- route("sold") --}}">
+                            <span>Réponses</span>
+                        </a>
+                    </nav>
                 </div>
             </div>
         </div>

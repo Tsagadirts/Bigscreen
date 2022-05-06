@@ -12,9 +12,9 @@
         @show
  
         <div class="container">
-            {{-- <nav>
-                @include('menu.index')
-            </nav> --}}
+            
+                
+            
             @yield('content')
         </div>
     </body>
