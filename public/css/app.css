@@ -11,25 +11,52 @@
     color: #000;
 }
 /* sidebar admin */
+.nav{
+    height: 0vh;
+}
 .menu_admin{
     display: grid;
+    grid-gap: 3rem;
     border: 1px solid #000;
-    width: 13%;
-    grid-gap: 1rem;
+    width: 20%;
     text-align: center;
-    padding: 1rem 0;
+    margin-left: 6.6rem;
+    height: 92.9vw;
+    align-content: center;
+}
+.menu_admin h1{
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
 }
 .menu_admin a{
     text-decoration: none;
     color: #000;
+    height: 2rem;
 }
-.menu_admin a:hover{
-    color: #007bff;
+.menu_admin button{
+    padding: 1rem 0rem;
+    margin: 0rem 3rem;
+    border: none;
+}
+.menu_admin button:hover{
+    background-color: #007bff;
 }
 /* page statistic */
 .myChart{
     width: 20%;
     /* margin-left: 50rem; */
+}
+/* questionaire admin */
+.questions{
+    border: 1px solid #000;
+    width: 60%;
+    margin-left: auto;
+    padding-left: 2rem;
+    margin-right: 12rem;
+}
+.table_questions{
+    padding-left: 2rem;
+
 }
 
 

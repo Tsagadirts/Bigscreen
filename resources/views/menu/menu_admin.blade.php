@@ -1,14 +1,15 @@
 <div class="menu_admin">
-    <a href="{{ route("statistic") }}">
+    <h1 class="big">Bigscreen</h1>
+    <button><a href="{{ route("statistic") }}">
         <span>Accueil</span>
-    </a> 
-    <a href="{{-- route("dashboard") --}}">
+    </a></button>
+    <button><a href="{{ route("form") }}">
         <span>Questions</span>
-    </a>
-    <a href="{{-- route("sold") --}}">
+    </a></button>
+    <button><a href="{{-- route("sold") --}}">
         <span>Réponses</span>
-    </a>
-    <a href="{{ route("home") }}">
+    </a></button>
+    <button><a href="{{ route("home") }}">
         <span>Dashboard</span>
-    </a>
+    </a></button>
 </div>

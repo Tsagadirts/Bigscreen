@@ -10,30 +10,35 @@ use Illuminate\Http\Request;
 class ChartJsController extends Controller
 {
 
-    public function create()
-    {
-        return view('answer');
-    }
+    // public function create()
+    // {
+    //     return view('answer');
+    // }
 
-    public function store(Request $request)
-    {
-        $chart = new chart([
-          'user_email' => $request->get('user_email'),
-        //   'token' => $request->get('token'),
-        ]);
-        $chart->save();
+    // public function store(Request $request)
+    // {
+    //     $chart = new chart([
+    //       'user_email' => $request->get('user_email'),
+    //     //   'token' => $request->get('token'),
+    //     ]);
+    //     $chart->save();
 
-        return redirect('chart');
-    }
+    //     return redirect('chart');
+    // }
 
-    public function index()
-    {
-        return view('statistic');
-    }
+    // public function index()
+    // {
+    //     return view('statistic');
+    // }
 
     public function chart()
       {
-        
+        $user = DB::table('answers')
+        ->where('answers', 6, 7, 10)
+        ->select('surveyed_id', DB::raw('SUM(quantity) as quantity'))
+        ->groupBy('answer.body')
+        ->orderBy('quantity', 'desc')
+        ->pluck('body', 'quantity');
       }
 }
 

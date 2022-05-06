@@ -42,12 +42,13 @@ Route::post('/results', [QuestionaireController::class, 'results'])->name('resul
 Auth::routes();
 
 
-Route::get('/statistic', [ChartJsController::class, 'statistic'])->name('statistic');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/statistic', [QuestionaireController::class, 'statistic'])->name('statistic');
 
-Route::get('/answers', [HomeController::class, 'answers'])->name('answers');
+Route::get('/questionaire', [QuestionaireController::class, 'questions'])->name('form');
+
+Route::get('/answers', [QuestionaireController::class, 'answers'])->name('answers');
 
 
 // route chart
