@@ -23,8 +23,11 @@ Route::get('/', function () {
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/sondage', [App\Http\Controllers\QuestionaireController::class, 'sondage'])->name('sondage');
-Route::post('/results', [QuestionaireController::class, 'results'])->name('results');
+Route::get('/sondage', [QuestionaireController::class, 'sondage'])->name('sondage');
+
+Route::post('/message',[QuestionaireController::class, 'message'])->name('message');
+
+Route::get('/result/{token}', [QuestionaireController::class, 'result'])->name('result');
 // route page admin 
 // Route::get('/admin/products', [ProductController::class, 'adminIndex'])->name('admin');
 Auth::routes();

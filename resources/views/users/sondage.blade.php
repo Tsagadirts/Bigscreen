@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-<form method="POST" action="/results">
+<form method="POST" action="/message">
     @csrf
     @foreach ($questions as $question)
     <p class="text-justify" >{{ $question->title }}</p>
