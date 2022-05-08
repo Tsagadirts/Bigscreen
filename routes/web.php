@@ -26,7 +26,7 @@ Route::get('/', function () {
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/sondage', [App\Http\Controllers\QuestionaireController::class, 'sondage'])->name('sondage');
-Route::post('/results', [QuestionaireController::class, 'results'])->name('results');
+Route::get('/results', [QuestionaireController::class, 'results'])->name('results');
 // route page admin 
 // Route::get('/admin/products', [ProductController::class, 'adminIndex'])->name('admin');
 
@@ -48,9 +48,10 @@ Route::get('/statistic', [QuestionaireController::class, 'statistic'])->name('st
 
 Route::get('/questionaire', [QuestionaireController::class, 'questions'])->name('form');
 
-Route::get('/answers', [QuestionaireController::class, 'answers'])->name('answers');
+Route::get('/answer/{token}', [QuestionaireController::class, 'answers'])->name('answer');
+// Route::post('/answers/add', [QuestionaireController::class, 'answers'])->name('answers');
 
-
+// dd($va);
 // route chart
 // Route::get('/chart', [ChartController::class, 'index']);
 // Route::get('/chart/chart', [ChartController::class, 'chart']);

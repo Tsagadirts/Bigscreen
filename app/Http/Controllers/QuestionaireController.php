@@ -71,7 +71,6 @@ class QuestionaireController extends Controller
         $surveyedId= $user->id;
         $questions= Question::all();
         $answers= Answer::where('surveyed_id',$surveyedId)->get();
-        return view('admin.answer', ['questions'=> $questions],['answers'=> $answers]);  
+        return view('admin.answer', ['questions'=> $questions],['answers'=> $answers]); 
     }
-
 }
