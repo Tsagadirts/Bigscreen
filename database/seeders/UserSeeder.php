@@ -7,6 +7,7 @@ use Database\Factories\UserFactory;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+// use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder

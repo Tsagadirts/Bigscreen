@@ -1,11 +1,29 @@
-<table>
-  <tr>
-    <td>Le numéro de la question</td>
-    <td>Le corps de la question</td>
-    <td>La réponse en texte</td>
-  </tr>
-  <tr>
-    <td>Jeanne</td>
-    <td>Biche</td>
-  </tr>
+@extends('layouts.admin')
+
+@section("content")
+
+<div class="questions">
+  <table class="table_questions">
+    <thead>
+      <tr>
+        <th>Numéro</th>
+        <th>Question</th>
+        <th>Type</th>
+      </tr>
+    @foreach ($questions as $question)
+   </thead>
+   <tbody>
+     <tr>
+       <td>{{ $question->id }}</</td>
+       <td>{{ $question->body }}</</td>
+       <td>{{ $question->question_type }}</</td>
+     </tr>
+    @endforeach
+  </thead>
 </table>
+</div>
+@endsection
+
+
+
+

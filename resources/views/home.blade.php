@@ -20,7 +20,7 @@
                         <a href="{{ route("statistic") }}">
                             <span>Accueil</span>
                         </a> 
-                        <a href="{{-- route("dashboard") --}}">
+                        <a href="{{ route("form") }}">
                             <span>Questions</span>
                         </a>
                         <a href="{{-- route("sold") --}}">
