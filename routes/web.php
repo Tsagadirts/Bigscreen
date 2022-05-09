@@ -51,6 +51,19 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 
-Route::get('/answers', [HomeController::class, 'answers'])->name('answers');
+Route::get('/questionaire', [QuestionaireController::class, 'questions'])->name('form');
+
+Route::get('/answer/{token}', [QuestionaireController::class, 'answers'])->name('answer');
+// Route::post('/answers/add', [QuestionaireController::class, 'answers'])->name('answers');
+
+// dd($va);
+// route chart
+// Route::get('/chart', [ChartController::class, 'index']);
+// Route::get('/chart/chart', [ChartController::class, 'chart']);
+
+// Route::get('/chart/add', [ChartController::class, 'create']);
+// Route::post('chart/add', [ChartController::class, 'store']);
+
+Route::get('chart', [ChartJSController::class, 'index']);
 
 

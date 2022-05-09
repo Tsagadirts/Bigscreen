@@ -46,4 +46,18 @@ class QuestionaireController extends Controller
     }
     /********************************************* Admin Controller *******************************************/
 
+
+    public function questions(){
+        // on fait appel au questionnaire
+        return view('admin.questionaire', ['questions' => Question::all()]);  
+    }
+
+    public function answers(Request $request){
+        $token = $request->token;
+        $user= Surveyed::where('token',$token)->first();
+        $surveyedId= $user->id;
+        $questions= Question::all();
+        $answers= Answer::where('surveyed_id',$surveyedId)->get();
+        return view('admin.answer', ['questions'=> $questions],['answers'=> $answers]); 
+    }
 }
