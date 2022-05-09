@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.master')
 
 @section("content")
 
@@ -15,7 +15,7 @@
    <tbody>
      <tr>
        {{-- -1 = 0 qui est le debut du tableau --}}
-       <td>{{ $questions[$answer->question_id-1] }}</</td>
+       <td>{{ $questions[$answer->question_id-1]->id }}</</td>
        <td>{{ $questions[$answer->question_id-1]->body }}</</td>
        <td>{{ $answer->answer }}</</td>
      </tr>

@@ -53,7 +53,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/questionaire', [QuestionaireController::class, 'questions'])->name('form');
 
-Route::get('/answer/{token}', [QuestionaireController::class, 'answers'])->name('answer');
+Route::get('/answer', [QuestionaireController::class, 'answers'])->name('answer');
 // Route::post('/answers/add', [QuestionaireController::class, 'answers'])->name('answers');
 
 // dd($va);

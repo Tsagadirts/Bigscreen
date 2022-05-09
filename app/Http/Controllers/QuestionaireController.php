@@ -52,12 +52,9 @@ class QuestionaireController extends Controller
         return view('admin.questionaire', ['questions' => Question::all()]);  
     }
 
-    public function answers(Request $request){
-        $token = $request->token;
-        $user= Surveyed::where('token',$token)->first();
-        $surveyedId= $user->id;
+    public function answers(){
         $questions= Question::all();
-        $answers= Answer::where('surveyed_id',$surveyedId)->get();
+        $answers= Answer::all();
         return view('admin.answer', ['questions'=> $questions],['answers'=> $answers]); 
     }
 }
