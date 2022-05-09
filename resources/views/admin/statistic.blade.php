@@ -3,74 +3,92 @@
 
 @section("content")
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" 
-integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" 
-crossorigin="anonymous" referrerpolicy="no-referrer">
-</script>
-{{-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> --}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="{{asset('assets/css/components.min.css')}}" rel="stylesheet" type="text/css">	
+	<script type="text/javascript" src="{{asset('assets/js/jquery.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>	
+	<script type="text/javascript" src="{{asset('assets/js/echarts.min.js')}}"></script>
 
-<div class="myChart">
-<canvas id="myChart" width="400" height="400"></canvas>
-<script>
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow'],
-        datasets: [{
-            label: '# of Votes',
-            data: [6,7,10],
-            backgroundColor: [
-              "#DEB887",
-              "#A9A9A9",
-              "#DC143C",
-              "#F4A460",
-              "#2E8B57",
-              "#1D7A46",
-              "#CDA776",
-            ],
-            borderColor: [
-              "#CDA776",
-              "#989898",
-              "#CB252B",
-              "#E39371",
-              "#1D7A46",
-              "#F4A460",
-              "#CDA776",
-            ],
-            borderWidth: [1, 1, 1, 1, 1,1,1]
-          }
-        ]
-      };
- 
-      //options
-      var options = {
-        responsive: true,
-        title: {
-          display: true,
-          position: "top",
-          text: "Last Week Registered Users -  Day Wise Count",
-          fontSize: 18,
-          fontColor: "#111"
-        },
-        legend: {
-          display: true,
-          position: "bottom",
-          labels: {
-            fontColor: "#333",
-            fontSize: 16
-          }
-        }
-      };
- 
-      //create Pie Chart class object
-      var chart1 = new Chart(ctx, {
-        type: "pie",
-        data: data,
-        options: options
+<body>
+  <div class="col-md-12">
+    <h1 class="text-center">Bigscreen Chart</h1>
+    <div class="col-xl-6" style="margin-top: 30px;">
+      <div class="card">
+        <div class="card-body">
+          <div class="chart-container">
+            <div class="chart has-fixed-height" id="pie_basic"></div>
+          </div>
+        </div>
+      </div>
+    </div>	
+  </div>
+  </body>
+
+
+
+
+<script type="text/javascript">
+  var pie_basic_element = document.getElementById('pie_basic');
+  if (pie_basic_element) {
+      var pie_basic = echarts.init(pie_basic_element);
+      pie_basic.setOption({               
+          
+          textStyle: {
+              fontFamily: 'Roboto, Arial, Verdana, sans-serif',
+              fontSize: 13
+          },
+  
+          title: {
+              text: 'Pie Chart Example',
+              left: 'center',
+              textStyle: {
+                  fontSize: 17,
+                  fontWeight: 500
+              },
+              subtextStyle: {
+                  fontSize: 12
+              }
+          },
+  
+          tooltip: {
+              trigger: 'item',
+              backgroundColor: 'rgba(0,0,0,0.75)',
+              padding: [10, 15],
+              textStyle: {
+                  fontSize: 13,
+                  fontFamily: 'Roboto, sans-serif'
+              },
+              formatter: "{a} <br/>{b}: {c} ({d}%)"
+          },
+  
+          legend: {
+              orient: 'horizontal',
+              bottom: '0%',
+              left: 'center',                   
+              data: ['answer6', 'answer7','answer10'],
+              itemHeight: 8,
+              itemWidth: 8
+          },
+  
+          series: [{
+              name: 'question_id',
+              type: 'pie',
+              radius: '70%',
+              center: ['50%', '50%'],
+              itemStyle: {
+                  normal: {
+                      borderWidth: 1,
+                      borderColor: '#fff'
+                  }
+              },
+              data: [
+                  {value: {{$answer6_count}}, name: 'answer6'},
+                  {value: {{$answer7_count}}, name: 'answer7'},
+                  {value: {{$answer10_count}}, name: 'answer10'}
+              ]
+          }]
       });
- 
-  });
-</script>
+  }
+  </script>
 </div>
 @endsection

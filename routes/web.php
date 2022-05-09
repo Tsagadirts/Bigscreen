@@ -46,10 +46,10 @@ Auth::routes();
 
 
 
-Route::get('/statistic', [ChartJsController::class, 'statistic'])->name('statistic');
+Route::get('/statistic', [ChartJsController::class, 'echart'])->name('statistic');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/statistic', [QuestionaireController::class, 'statistic'])->name('statistic');
+
 
 Route::get('/answers', [HomeController::class, 'answers'])->name('answers');
 

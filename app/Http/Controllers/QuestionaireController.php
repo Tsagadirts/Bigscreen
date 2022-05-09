@@ -44,21 +44,6 @@ class QuestionaireController extends Controller
         $answers= Answer::where('surveyed_id',$surveyedId)->get();
         return view('users.results',['questions'=>$questions],['answers'=>$answers]);
     }
-
-
-       
-    
-
-
-
-
-
-
     /********************************************* Admin Controller *******************************************/
-
-    public function statistic(){
-        // on fait appel au questionnaire
-        return view('admin.statistic');  
-    }
 
 }

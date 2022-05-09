@@ -26,11 +26,14 @@
       </div>    
     @else
     <div>
+      <p>{{ $question->body }}</p>
       @for ($i = 1; $i<=5; $i++)
+        
         <input type="radio" id="{{ $question->id }}"
          name="{{ $question->id }}" value="{{$i}}">
         <label for="{{ $question->id }}">{{$i}}</label>
       @endfor
+      
       </div>
     @endif
 
