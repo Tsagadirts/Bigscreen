@@ -36,8 +36,8 @@ class ChartJsController extends Controller
         $user = DB::table('answers')
         ->where('answers', 6, 7, 10)
         ->select('surveyed_id', DB::raw('SUM(quantity) as quantity'))
-        ->groupBy('answer.body')
-        ->orderBy('quantity', 'desc')
+        // ->groupBy('answer.body')
+        // ->orderBy('quantity', 'desc')
         ->pluck('body', 'quantity');
       }
 }

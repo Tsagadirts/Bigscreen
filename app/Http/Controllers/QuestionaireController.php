@@ -6,6 +6,7 @@ use App\Models\Question;
 use App\Models\Surveyed;
 use Illuminate\Http\Request;
 
+
 class QuestionaireController extends Controller
 {
     public function sondage(){
@@ -45,15 +46,6 @@ class QuestionaireController extends Controller
         return view('users.results',['questions'=>$questions],['answers'=>$answers]);
     }
 
-
-       
-    
-
-
-
-
-
-
     /********************************************* Admin Controller *******************************************/
 
     public function statistic(){
@@ -67,11 +59,13 @@ class QuestionaireController extends Controller
     }
 
     public function answers(Request $request){
-        $token = $request->token;
-        $user= Surveyed::where('token',$token)->first();
-        $surveyedId= $user->id;
+        $surveyeds= Surveyed::all();
         $questions= Question::all();
-        $answers= Answer::where('surveyed_id',$surveyedId)->get();
-        return view('admin.answer', ['questions'=> $questions],['answers'=> $answers]); 
+        $answers= Answer::whereIn('surveyed_id', $surveyeds->pluck('id'))->get();
+        return view('admin.answer', ['questions'=>$questions],['answers'=>$answers],['surveyeds'=>$surveyeds]);        
     }
 }
+
+
+// $petani = DB::table('answers')->get();
+        // return view('admin.answer'); 

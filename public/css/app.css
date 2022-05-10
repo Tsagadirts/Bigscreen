@@ -16,12 +16,14 @@
 }
 .menu_admin{
     display: grid;
-    grid-gap: 3rem;
+    grid-gap: 2rem;
     border: 1px solid #000;
+    border-right: none;
     width: 20%;
     text-align: center;
-    margin-left: 6.6rem;
-    height: 92.9vw;
+    margin-left: 7.2rem;
+    margin-top: 7.5rem;
+    padding-bottom: 2.2rem;
     align-content: center;
 }
 .menu_admin h1{
@@ -44,15 +46,19 @@
 /* page statistic */
 .myChart{
     width: 20%;
-    /* margin-left: 50rem; */
+    position: relative;
+    left: 23.4rem;
+    height: 32.4vw;
+    top: 4rem;
 }
 /* questionaire admin */
-.questions{
+.questions{    
     border: 1px solid #000;
-    width: 60%;
+    width: 65%;
     margin-left: auto;
     padding-left: 2rem;
-    margin-right: 12rem;
+    margin-right: 5rem;
+    margin-top: 4rem;
 }
 .table_questions{
     padding-left: 2rem;

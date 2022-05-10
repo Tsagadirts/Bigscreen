@@ -30,20 +30,10 @@ Route::get('/sondage', [QuestionaireController::class, 'sondage'])->name('sondag
 Route::post('/message',[QuestionaireController::class, 'message'])->name('message');
 
 Route::get('/result/{token}', [QuestionaireController::class, 'result'])->name('result');
-// route page admin 
-// Route::get('/admin/products', [ProductController::class, 'adminIndex'])->name('admin');
-
-
 
 /******************************************** Route Admin ****************************************************/
-// page dashboard
-
-// Route::get('/home', function () {
-//     return view('home');
-// })->middleware(['auth'])->name('home');
 
 Auth::routes();
-
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
@@ -51,8 +41,9 @@ Route::get('/statistic', [QuestionaireController::class, 'statistic'])->name('st
 
 Route::get('/questionaire', [QuestionaireController::class, 'questions'])->name('form');
 
-Route::get('/answer/{token}', [QuestionaireController::class, 'answers'])->name('answer');
-// Route::post('/answers/add', [QuestionaireController::class, 'answers'])->name('answers');
+Route::get('/answer', [QuestionaireController::class, 'answers'])->name('answer');
+
+// Route::post('/answer', [QuestionaireController::class, 'answers'])->name('answer');
 
 // dd($va);
 // route chart
@@ -62,6 +53,6 @@ Route::get('/answer/{token}', [QuestionaireController::class, 'answers'])->name(
 // Route::get('/chart/add', [ChartController::class, 'create']);
 // Route::post('chart/add', [ChartController::class, 'store']);
 
-Route::get('chart', [ChartJSController::class, 'index']);
+// Route::get('chart', [ChartJSController::class, 'index']);
 
 
