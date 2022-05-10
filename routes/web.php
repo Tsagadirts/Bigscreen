@@ -21,10 +21,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::get('/sondage', [QuestionaireController::class, 'sondage'])->name('sondage');
 
 Route::post('/message',[QuestionaireController::class, 'message'])->name('message');
@@ -35,25 +31,13 @@ Route::get('/result/{token}', [QuestionaireController::class, 'result'])->name('
 
 Auth::routes();
 
-
-
 Route::get('/statistic', [ChartJsController::class, 'echart'])->name('statistic');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/questionaire', [QuestionaireController::class, 'questions'])->name('form');
+Route::get('/questionaire', [ChartJsController::class, 'questions'])->name('form');
 
-Route::get('/answer', [QuestionaireController::class, 'answers'])->name('answer');
+Route::get('/answer', [ChartJsController::class, 'answers'])->name('answer');
 
-
-// dd($va);
-// route chart
-// Route::get('/chart', [ChartController::class, 'index']);
-// Route::get('/chart/chart', [ChartController::class, 'chart']);
-
-// Route::get('/chart/add', [ChartController::class, 'create']);
-// Route::post('chart/add', [ChartController::class, 'store']);
-
-// Route::get('chart', [ChartJSController::class, 'index']);
 
 

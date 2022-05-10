@@ -6,7 +6,7 @@
     <button><a href="{{ route("form") }}">
         <span>Questions</span>
     </a></button>
-    <button><a href="{{-- route("sold") --}}">
+    <button><a href="{{ route("answer") }}">
         <span>Réponses</span>
     </a></button>
     <button><a href="{{ route("home") }}">

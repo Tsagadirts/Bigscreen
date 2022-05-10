@@ -23,7 +23,7 @@
                         <a href="{{ route("form") }}">
                             <span>Questions</span>
                         </a>
-                        <a href="{{-- route("sold") --}}">
+                        <a href="{{ route("answer") }}">
                             <span>Réponses</span>
                         </a>
                     </nav>
