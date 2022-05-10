@@ -45,24 +45,23 @@ class QuestionaireController extends Controller
         $answers= Answer::where('surveyed_id',$surveyedId)->get();
         return view('users.results',['questions'=>$questions],['answers'=>$answers]);
     }
-
     /********************************************* Admin Controller *******************************************/
 
-    public function statistic(){
-        // on fait appel au questionnaire
-        return view('admin.statistic');  
-    }
 
     public function questions(){
         // on fait appel au questionnaire
         return view('admin.questionaire', ['questions' => Question::all()]);  
     }
 
-    public function answers(Request $request){
-        $surveyeds= Surveyed::all();
+    // public function answers(Request $request){
+    //     $surveyeds= Surveyed::all();
+    //     $questions= Question::all();
+    //     $answers= Answer::whereIn('surveyed_id', $surveyeds->pluck('id'))->get();
+    //     return view('admin.answer', ['questions'=>$questions],['answers'=>$answers],['surveyeds'=>$surveyeds]);        
+    public function answers(){
         $questions= Question::all();
-        $answers= Answer::whereIn('surveyed_id', $surveyeds->pluck('id'))->get();
-        return view('admin.answer', ['questions'=>$questions],['answers'=>$answers],['surveyeds'=>$surveyeds]);        
+        $answers= Answer::all();
+        return view('admin.answer', ['questions'=> $questions],['answers'=> $answers]); 
     }
 }
 

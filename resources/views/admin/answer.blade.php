@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.master')
 
 @section("content")
 
@@ -11,18 +11,21 @@
         <th>Type</th>
       </tr> --}}
    </thead>
-   @foreach ($surveyeds as $surveyed)
+   {{-- @foreach ($surveyeds as $surveyed) --}}
     @foreach ($surveyed->answers as $answer)
    <tbody>
      <tr>
        {{-- -1 = 0 qui est le debut du tableau --}}
-       <td>{{ [$answer->question_id-1] }}</td>
+       {{-- <td>{{ [$answer->question_id-1] }}</td>
        <td>{{ [$answer->question_id-1]->body }}</td>
-       <td>{{ [$answer->answer] }}</td>
+       <td>{{ [$answer->answer] }}</td> --}}
+       <td>{{ $questions[$answer->question_id-1]->id }}</</td>
+       <td>{{ $questions[$answer->question_id-1]->body }}</</td>
+       <td>{{ $answer->answer }}</</td>
      </tr>
     </tbody>
     @endforeach
-    @endforeach
+    {{-- @endforeach --}}
   {{-- </thead> --}}
 </table>
 </div>

@@ -2,63 +2,37 @@
 
 namespace App\Http\Controllers;
 use App\Models\Answer;
-
-
-
+use App\Models\Question;
+use App\Models\Surveyed;
 use Illuminate\Http\Request;
 
 class ChartJsController extends Controller
 {
+    public function echart(Request $request)
+    {
+        $answer6a = Answer::where('question_id','6')
+                            ->where('answer','Occulus Rift/s')
+                            ->count();
+                            echo($answer6a);    
 
-    // public function create()
-    // {
-    //     return view('answer');
-    // }
+        $answer6b = Answer::where('question_id','6')
+                    ->where('answer','HTC Vive')
+                    ->count();
+            echo($answer6b);  
+            
+        $answer6c = Answer::where('question_id','6')
+            ->where('answer','Windows Mixed Reality')
+            ->count();
+           echo($answer6c);   
 
-    // public function store(Request $request)
-    // {
-    //     $chart = new chart([
-    //       'user_email' => $request->get('user_email'),
-    //     //   'token' => $request->get('token'),
-    //     ]);
-    //     $chart->save();
+        $answer6d = Answer::where('question_id','6')
+                            ->where('answer','PSVR')
+                            ->count();
+                    echo($answer6d);
 
-    //     return redirect('chart');
-    // }
 
-    // public function index()
-    // {
-    //     return view('statistic');
-    // }
-
-    public function chart()
-      {
-        $user = DB::table('answers')
-        ->where('answers', 6, 7, 10)
-        ->select('surveyed_id', DB::raw('SUM(quantity) as quantity'))
-        // ->groupBy('answer.body')
-        // ->orderBy('quantity', 'desc')
-        ->pluck('body', 'quantity');
-      }
+         	
+    	 return view('admin.statistic',['answer6a'=>$answer6a,'answer6b'=>$answer6b,'answer6c'=>$answer6c,'answer6d'=>$answer6d]);
+    }
 }
 
-// public function index()
-//     {
- 
-//  $record = User::select(\DB::raw("COUNT(*) as count"), 
-//     \DB::raw("DAYNAME(created_at) as day_name"), \DB::raw("DAY(created_at) as day"))
-//     ->where('created_at', '>', Carbon::today()->subDay(6))
-//     ->groupBy('day_name','day')
-//     ->orderBy('day')
-//     ->get();
-  
-//      $data = [];
- 
-//      foreach($record as $row) {
-//         $data['label'][] = $row->day_name;
-//         $data['data'][] = (int) $row->count;
-//       }
- 
-//     $data['chart_data'] = json_encode($data);
-//     return view('chart-js', $data);
-//     }

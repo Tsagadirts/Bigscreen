@@ -35,15 +35,16 @@ Route::get('/result/{token}', [QuestionaireController::class, 'result'])->name('
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/statistic', [QuestionaireController::class, 'statistic'])->name('statistic');
+
+Route::get('/statistic', [ChartJsController::class, 'echart'])->name('statistic');
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/questionaire', [QuestionaireController::class, 'questions'])->name('form');
 
 Route::get('/answer', [QuestionaireController::class, 'answers'])->name('answer');
 
-// Route::post('/answer', [QuestionaireController::class, 'answers'])->name('answer');
 
 // dd($va);
 // route chart
