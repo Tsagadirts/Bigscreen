@@ -47,6 +47,7 @@ Auth::routes();
 
 
 Route::get('/statistic', [ChartJsController::class, 'echart'])->name('statistic');
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
