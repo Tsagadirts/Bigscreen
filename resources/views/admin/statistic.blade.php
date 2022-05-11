@@ -51,10 +51,10 @@
     config);
   </script>
 
-{{-- <div class="m">
+<div class="m">
     <canvas id="pieChart" width="100" height="100"></canvas>
-</div> --}}
-{{-- <script>
+</div> 
+<script>
     const labels = [
       'regarder des émissions TV en direct',
       'regarder des films',
@@ -83,6 +83,6 @@
     const pieChart = new Chart(
     document.getElementById('pieChart'),
     config);
-  </script> --}}
+  </script> 
 
 @endsection
