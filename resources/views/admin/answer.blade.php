@@ -14,13 +14,30 @@
     @foreach ($answers as $answer)
    <tbody>
      <tr>
-       <td>{{ $questions[$answer->question_id-1]->id }}</</td>
-       <td>{{ $questions[$answer->question_id-1]->body }}</</td>
-       <td>{{ $answer->answer }}</</td>
+       <td>{{ $questions[$answer->question_id-1]->id }}</td>
+       <td>{{ $questions[$answer->question_id-1]->body }}</td>
+       <td>{{ $answer->answer }}</td>
      </tr>
     </tbody>
     @endforeach
-  {{-- </thead> --}}
 </table>
 </div>
 @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
