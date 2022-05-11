@@ -16,13 +16,12 @@
 }
 .menu_admin{
     display: grid;
+    position: fixed;
     grid-gap: 2rem;
-    border: 1px solid #000;
     border-right: none;
     width: 20%;
     text-align: center;
-    margin-left: 7.2rem;
-    margin-top: 7.5rem;
+    margin-top: 6rem;
     padding-bottom: 2.2rem;
     align-content: center;
 }
@@ -53,16 +52,13 @@
 }
 /* questionaire admin */
 .questions{    
-    border: 1px solid #000;
-    width: 65%;
-    margin-left: auto;
+    /* border: 1px solid #000; */
+    margin-left: 16rem;
     padding-left: 2rem;
-    margin-right: 5rem;
     margin-top: 4rem;
 }
-.table_questions{
-    padding-left: 2rem;
-
+table, tr, th{
+    border: 1px solid #000;
 }
 
 

@@ -31,23 +31,7 @@ Route::get('/result/{token}', [QuestionaireController::class, 'result'])->name('
 
 Auth::routes();
 
-// Route::group(['middleware' => 'myMiddleware'], function() {
-//     Route::get('/sixChart', 'ChartJsController@statistic');
-//     Route::post('/sevenChart', 'ChartJsController@statistic');
-//     Route::put('/tenChart', 'ChartJsController@statistic');
-// });
-
-// Route::middleware(['myMiddleware'])->group(function () {
-//     Route::get('/sixChart', 'ChartJsController@statistic');
-//     Route::get('/sevenChart', 'ChartJsController@statistic');
-//     Route::get('/tenChart', 'RChartJsController@statistic');
-// });
-
-Route::get('/statistic', [ChartJsController::class, 'sixChart'])->name('statistic');
-
-// Route::get('/statistic', [ChartJsController::class, 'sevenChart'])->name('statistic');
-
-// Route::get('/statistic', [ChartJsController::class, 'tenChart'])->name('statistic');
+Route::get('/statistic', [ChartJsController::class, 'charts'])->name('statistic');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
