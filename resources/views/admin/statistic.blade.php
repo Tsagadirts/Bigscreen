@@ -4,21 +4,21 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <div class="charts">
-<div class= " d-flex row align-items-center justify-content-center mx-auto vh-100">
-  <div class =" d-flex col-4 graph bg-warning m-2 ">
-    <canvas class ="w-100 m-2" id="chart_six"></canvas>
+<div class="charts">
+  <div class= "charts d-flex row align-items-center justify-content-center mx-auto vh-100">
+    <div class =" d-flex col-4 graph">
+      <canvas class ="w-100 m-2" id="chart_six"></canvas>
+    </div>
+    <div class =" d-flex col-4 graph">
+      <canvas class =" w-100 m-2" id="chart_seven"></canvas>
+    </div>
+    <div class ="d-flex col-4 graph m-1">
+      <canvas class =" w-100 m-2" id="chart_ten"></canvas>
+    </div>
+    <div class =" d-flex col-4 graph">
+        <canvas class ="w-100 m-2" id="radar"></canvas>
+    </div>
   </div>
-  <div class =" d-flex col-4 graph bg-warning m-2 ">
-    <canvas class =" w-100 m-2" id="chart_seven"></canvas>
-  </div>
-  <div class ="d-flex col-4 graph bg-warning m-2">
-    <canvas class =" w-100 m-2" id="chart_ten"></canvas>
-  </div>
-  {{-- <div class =" d-flex col-4 graph bg-warning m-2">
-      <canvas class ="w-100 m-2" id="radar"></canvas>
-  </div> --}}
-</div>
 </div>
 
 

@@ -20,7 +20,7 @@
     grid-gap: 1rem;
     width: 20%;
     text-align: center;
-    margin-top: 6rem;
+    top: 5rem;
 }
 .menu_admin h1{
     font-size: 3.5rem;
@@ -45,8 +45,10 @@
 }
 /* page statistic */
 .charts{
-    margin-left: 20rem;
-    margin-top: 4rem;
+    left: 1.5rem;
+    top: 1.5rem;
+    position: relative;
+    height: 0rem;
 }
 /* questionaire admin */
 .questions{    
