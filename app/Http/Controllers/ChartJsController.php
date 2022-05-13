@@ -25,32 +25,42 @@ class ChartJsController extends Controller
       'Occulus Rift/s' => 0,
       'HTC Vive' => 0, 
       'Windows Mixed Reality' => 0, 
-      'PSVR' => 0, 
+      'PSVR' => 0
     ];
       $result_six = Answer::where('question_id','6')->get();                  
       foreach($result_six as $value){
         $quantity_six[$value->answer]++;
-      };
+      }
 
     $quantity_seven = [
       'SteamVR' => 0,
       'Occulus store' => 0,
       'Viveport' => 0, 
       'Playstation VR' => 0, 
-      'Google Play'=> 0,
-      'Windows store' => 0, 
+      'Google Play' => 0,
+      'Windows store' => 0 
     ];
-      $result_seven = Answer::where('question_id','7')->get();                  
-      foreach($result_seven as $value){
-        $quantity_seven[$value->answer]++;
+      $res = Answer::where('question_id','7')->get();                  
+      foreach($res as $val){
+        $quantity_seven[$val->answer]++;
       }
 
+    $quantity_ten = [
+      'regarder des émissions TV en direct' => 0,
+      'regarder des films' => 0,
+      'jouer en solo' => 0, 
+      'jouer en team' => 0
+    ];
+      $res = Answer::where('question_id','10')->get();                  
+      foreach($res as $val){
+        $quantity_ten[$val->answer]++;
+      }
 
     return view('admin.statistic',
     [
       'quantity_six' => $quantity_six,
       'quantity_seven' => $quantity_seven,
-      // 'quantity_six' => $quantity_six,
+      'quantity_ten' => $quantity_ten,
     ]);
   }
 }

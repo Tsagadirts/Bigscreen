@@ -22,11 +22,7 @@
               </option>
               @endforeach
           </select>
-        </div>
-         
-
-         
-    
+        </div>    
     @elseif($question->question_type=='b')
       <div>
           <label for="{{ $question->id }}" class="form-label">{{ $question->body }}</label>
@@ -37,9 +33,9 @@
       <p>{{ $question->body }}</p>
       @for ($i = 1; $i<=5; $i++)
         <div class="form-check form-check-inline">
+        <label for="{{ $question->id }}">{{$i}}</label>
         <input type="radio" id="{{ $question->id }}"
          name="{{ $question->id }}" value="{{$i}}">
-        <label for="{{ $question->id }}">{{$i}}</label>
       </div>
       @endfor
       

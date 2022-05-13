@@ -17,13 +17,10 @@
 .menu_admin{
     display: grid;
     position: fixed;
-    grid-gap: 2rem;
-    border-right: none;
+    grid-gap: 1rem;
     width: 20%;
     text-align: center;
     margin-top: 6rem;
-    padding-bottom: 2.2rem;
-    align-content: center;
 }
 .menu_admin h1{
     font-size: 3.5rem;
@@ -34,31 +31,28 @@
     color: #000;
     height: 2rem;
 }
+.menu_admin a:hover{
+    color: #000;
+}
 .menu_admin button{
     padding: 1rem 0rem;
     margin: 0rem 3rem;
     border: none;
+    border-radius: 5%;
 }
 .menu_admin button:hover{
-    background-color: #007bff;
+    box-shadow: 2px 2px 4px #000000;
 }
 /* page statistic */
-.myChart{
-    width: 20%;
-    position: relative;
-    left: 23.4rem;
-    height: 32.4vw;
-    top: 4rem;
+.charts{
+    margin-left: 20rem;
+    margin-top: 4rem;
 }
 /* questionaire admin */
 .questions{    
-    /* border: 1px solid #000; */
     margin-left: 16rem;
     padding-left: 2rem;
     margin-top: 4rem;
-}
-table, tr, th{
-    border: 1px solid #000;
 }
 
 

@@ -67,8 +67,7 @@ class QuestionsTableSeeder extends Seeder
             'title' => 'Question 7/20',
             'body' => 'Sur quel magasin d’application achetez vous des contenus VR ?',
             'question_type'=>'a',
-            'options'=>["SteamVR","Occulus store","Viveport","Playstation VR","Google
-            Play","Windows store"]
+            'options'=>["SteamVR","Occulus store","Viveport","Playstation VR","Google Play","Windows store"]
 
         ]);
 

@@ -4,15 +4,30 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <div class="myChart">
-    <canvas id="chart_six"></canvas>
+    <div class="charts">
+<div class= " d-flex row align-items-center justify-content-center mx-auto vh-100">
+  <div class =" d-flex col-4 graph bg-warning m-2 ">
+    <canvas class ="w-100 m-2" id="chart_six"></canvas>
   </div>
+  <div class =" d-flex col-4 graph bg-warning m-2 ">
+    <canvas class =" w-100 m-2" id="chart_seven"></canvas>
+  </div>
+  <div class ="d-flex col-4 graph bg-warning m-2">
+    <canvas class =" w-100 m-2" id="chart_ten"></canvas>
+  </div>
+  {{-- <div class =" d-flex col-4 graph bg-warning m-2">
+      <canvas class ="w-100 m-2" id="radar"></canvas>
+  </div> --}}
+</div>
+</div>
 
-  <div class="myChart">
-    <canvas id="chart_seven"></canvas>
-  </div>
 
   <script>
+
+    const ctx = document.getElementById('chart_six');
+    const ctx2 = document.getElementById('chart_seven');
+    const ctx3 = document.getElementById('chart_ten');
+
     const labels = [
       'Occulus Rift/s',
       'HTC Vive',
@@ -43,13 +58,9 @@
         type: 'pie',
         data: data,
     };
-    const chart_six = new Chart(
-    document.getElementById('chart_six'),
-    config);
-
-/*******************************************************************************************************/    
-  
-    const labels = [
+    const chart_six = new Chart(ctx, config);
+     
+    const mots = [
       'SteamVR',
       'Occulus store',
       'Viveport',
@@ -57,9 +68,9 @@
       'Google Play',
       'Windows store'
     ];
-  
-    const data = {
-      labels: labels,
+
+    const live = {
+      labels: mots,
       datasets: [{
         label: '',
         backgroundColor: [
@@ -75,17 +86,47 @@
           {{$quantity_seven['Playstation VR']}},
           {{$quantity_seven['Google Play']}},
           {{$quantity_seven['Windows store']}}
-        ]
+        ],
       }]
     }; 
   
-    const config = {
+    const confi = {
         type: 'pie',
-        data: data,
+        data: live,
     };
-    const chart_seven = new Chart(
-    document.getElementById('chart_seven'),
-    config);
+    const chart_seven = new Chart(ctx2, confi);
+
+    const words = [
+      'regarder des émissions TV en direct',
+      'regarder des films',
+      'jouer en solo',
+      'jouer en team'
+    ];
+
+    const base = {
+      labels: words,
+      datasets: [{
+        label: '',
+        backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)',
+        'rgb(255, 25, 41)'
+        ],
+        data: [
+          {{$quantity_ten['regarder des émissions TV en direct']}}, 
+          {{$quantity_ten['regarder des films']}}, 
+          {{$quantity_ten['jouer en solo']}}, 
+          {{$quantity_ten['jouer en team']}}
+        ],
+      }]
+    }; 
+  
+    const conf = {
+        type: 'pie',
+        data: base,
+    };
+    const chart_ten = new Chart(ctx3, conf);
   </script>
 
 @endsection
