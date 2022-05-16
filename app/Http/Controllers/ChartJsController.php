@@ -16,7 +16,7 @@ class ChartJsController extends Controller
   public function answers(){
     // $questions= Question::all();
     // $answers= Answer::all();
-    return view('admin.answer', ['questions'=> Question::all()],['answers'=> Answer::all()]);
+    return view('admin.answer', ['questions'=> Question::all()],['answers'=> Answer::orderBy('created_at', 'desc')->get()]);
   }
 
   public function charts(Request $request)
@@ -56,11 +56,24 @@ class ChartJsController extends Controller
         $quantity_ten[$val->answer]++;
       }
 
-    return view('admin.statistic',
+    $quantity = [
+      '1' => 0,
+      '2' => 0,
+      '3' => 0, 
+      '4' => 0,
+      '5' => 0
+    ];
+      $res = Answer::where('question_id','11')->get();                  
+      foreach($res as $val){
+        $quantity[$val->answer]++;
+      }
+
+    return view('admin.home',
     [
       'quantity_six' => $quantity_six,
       'quantity_seven' => $quantity_seven,
       'quantity_ten' => $quantity_ten,
+      'quantity' => $quantity,
     ]);
   }
 }

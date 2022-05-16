@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChartJsController;
 use App\Http\Controllers\QuestionaireController;
-use App\Http\Controllers\HomeController;
 
 
 /*
@@ -31,9 +30,7 @@ Route::get('/result/{token}', [QuestionaireController::class, 'result'])->name('
 
 Auth::routes();
 
-Route::get('/statistic', [ChartJsController::class, 'charts'])->name('statistic');
-
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [ChartJsController::class, 'charts'])->name('home');
 
 Route::get('/questionaire', [ChartJsController::class, 'questions'])->name('form');
 

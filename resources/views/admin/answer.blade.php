@@ -9,15 +9,15 @@
         <th>Question</th>
         <th>Réponses</th>
       </tr>
-    @foreach ($answers as $key => $answer)
-     <tr>
-      {{-- @if ($key == 20)
-      <tr><br></tr>
-      @endif --}}
-       <td>{{ $questions[$answer->question_id-1]->id }}</td>
+    @foreach ($answers as $answer)
+    {{-- <thead class="thead-dark"> --}}
+      <tr>
+       <td >{{ $questions[$answer->question_id-1]->id }}</td>
        <td>{{ $questions[$answer->question_id-1]->body }}</td>
        <td>{{ $answer->answer }}</td>
-     </tr>
+       {{-- {{ $questions[$answer->question_id-1]->id % 20 ? null: '<br>'}} --}}
+      </tr>
+    {{-- </thead> --}}
     @endforeach
 </table>
 </div>

@@ -27,6 +27,7 @@
     const ctx = document.getElementById('chart_six');
     const ctx2 = document.getElementById('chart_seven');
     const ctx3 = document.getElementById('chart_ten');
+    const ctx4 = document.getElementById('radar');
 
     const labels = [
       'Occulus Rift/s',
@@ -60,7 +61,7 @@
     };
     const chart_six = new Chart(ctx, config);
      
-    const mots = [
+    const value = [
       'SteamVR',
       'Occulus store',
       'Viveport',
@@ -69,8 +70,8 @@
       'Windows store'
     ];
 
-    const live = {
-      labels: mots,
+    const base = {
+      labels: value,
       datasets: [{
         label: '',
         backgroundColor: [
@@ -92,19 +93,19 @@
   
     const confi = {
         type: 'pie',
-        data: live,
+        data: base,
     };
     const chart_seven = new Chart(ctx2, confi);
 
-    const words = [
+    const container = [
       'regarder des émissions TV en direct',
       'regarder des films',
       'jouer en solo',
       'jouer en team'
     ];
 
-    const base = {
-      labels: words,
+    const dat = {
+      labels: container,
       datasets: [{
         label: '',
         backgroundColor: [
@@ -124,9 +125,43 @@
   
     const conf = {
         type: 'pie',
-        data: base,
+        data: dat,
     };
     const chart_ten = new Chart(ctx3, conf);
+
+    const numbers = [
+      '1',
+      '2',
+      '3',
+      '4',
+      '5'
+    ];
+
+    const bas = {
+      labels: numbers,
+      datasets: [{
+        label: '',
+        backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)',
+        'rgb(255, 25, 41)'
+        ],
+        data: [
+          {{$quantity['1']}},
+          {{$quantity['2']}},
+          {{$quantity['3']}},
+          {{$quantity['4']}},
+          {{$quantity['5']}},
+        ],
+      }]
+    }; 
+  
+    const con = {
+        type: 'radar',
+        data: bas,
+    };
+    const radar = new Chart(ctx4, con);
   </script>
 
 @endsection
