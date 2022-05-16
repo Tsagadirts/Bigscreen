@@ -57,13 +57,13 @@ class ChartJsController extends Controller
       }
 
     $quantity = [
-      '1' => 0,
-      '2' => 0,
-      '3' => 0, 
-      '4' => 0,
-      '5' => 0
+      1 => 0,
+      2 => 0,
+      3 => 0, 
+      4 => 0,
+      5 => 0
     ];
-      $res = Answer::where('question_id','11')->get();                  
+      $res = Answer::where('question_id','11,12,13,14,15')->get();                  
       foreach($res as $val){
         $quantity[$val->answer]++;
       }

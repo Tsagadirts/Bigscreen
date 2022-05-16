@@ -4,7 +4,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <div class= "charts d-flex row align-items-center justify-content-center mx-auto">
+<div class="cha">
+<div class= "charts d-flex row align-items-center justify-content-center mx-auto">
     <div class =" d-flex col-4 graph">
         <canvas class ="w-100 m-2" id="chart_six"></canvas>
     </div>
@@ -17,7 +18,8 @@
     <div class =" d-flex col-4 graph">
         <canvas class ="w-100 m-2" id="radar"></canvas>
     </div>
-    </div>
+</div>
+</div>
     
 <script>
 
@@ -127,11 +129,11 @@ const conf = {
 const chart_ten = new Chart(ctx3, conf);
 
 const numbers = [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5'
+    1,
+    2,
+    3,
+    4,
+    5
 ];
 
 const bas = {
@@ -145,11 +147,11 @@ const bas = {
     'rgb(255, 25, 41)'
     ],
     data: [
-        {{$quantity['1']}},
-        {{$quantity['2']}},
-        {{$quantity['3']}},
-        {{$quantity['4']}},
-        {{$quantity['5']}},
+        {{$quantity[1]}},
+        {{$quantity[2]}},
+        {{$quantity[3]}},
+        {{$quantity[4]}},
+        {{$quantity[5]}},
     ],
     }]
 }; 

@@ -4,11 +4,13 @@
 
 <div class="questions">
   <table class="table_questions table table-bordered">
+    <thead class="thead text-center bg-secondary">
       <tr>
-        <th>Numéro</th>
-        <th>Question</th>
-        <th>Type</th>
+        <th>Numéros</th>
+        <th>Questions</th>
+        <th>Types</th>
       </tr>
+      </thead>
    @foreach ($questions as $question)
      <tr>
        <td>{{ $question->id }}</</td>

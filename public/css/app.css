@@ -15,33 +15,36 @@
 }
 .menu_admin a{
     text-decoration: none;
-    color: #000;
+    color: #fff;
     height: 2rem;
 }
 .menu_admin a:hover{
-    color: #000;
+    color: #fff;
 }
 .menu_admin button{
     padding: 1rem 0rem;
     margin: 0rem 3rem;
     border: none;
     border-radius: 5%;
+    background-color: #6c757d;
 }
 .menu_admin button:hover{
     box-shadow: 2px 2px 4px #000000;
 }
-/* page statistic */
+/* homepage */
 .charts{
     left: 4rem;
     top: 2rem;
     position: relative;
-    height: 0rem;
 }
-/* questionaire admin */
+/* questionaire et answer admin */
 .questions{    
     margin-left: 16rem;
     padding-left: 2rem;
     margin-top: 3rem;
+}
+.thead{
+    color: #fff;
 }
 
 
