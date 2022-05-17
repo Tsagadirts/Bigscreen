@@ -38,6 +38,10 @@ Auth::routes();
 //     return view('home');
 // })->middleware(['auth'])->name('form');
 
+// Route::get('/answer', [ChartJsController::class, 'answers'], function () {
+//     return view('home');
+// })->middleware(['auth'])->name('answer');
+
 Route::get('/home', [ChartJsController::class, 'charts'])->name('home');
 
 Route::get('/questionaire', [ChartJsController::class, 'questions'])->name('form');
