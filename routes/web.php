@@ -30,6 +30,14 @@ Route::get('/result/{token}', [QuestionaireController::class, 'result'])->name('
 
 Auth::routes();
 
+// Route::get('/home', [ChartJsController::class, 'charts'], function () {
+//     return view('home');
+// })->middleware(['auth'])->name('home');
+
+// Route::get('/questionaire', [ChartJsController::class, 'questions'], function () {
+//     return view('home');
+// })->middleware(['auth'])->name('form');
+
 Route::get('/home', [ChartJsController::class, 'charts'])->name('home');
 
 Route::get('/questionaire', [ChartJsController::class, 'questions'])->name('form');

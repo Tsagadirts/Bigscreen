@@ -36,6 +36,7 @@
     left: 4rem;
     top: 2rem;
     position: relative;
+    height: 0rem;
 }
 /* questionaire et answer admin */
 .questions{    
@@ -45,6 +46,11 @@
 }
 .thead{
     color: #fff;
+}
+.separator{
+    /* padding: 6rem;
+    margin: 6rem; */
+    background-color: #616161;
 }
 
 
