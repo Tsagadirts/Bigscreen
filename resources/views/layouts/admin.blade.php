@@ -11,7 +11,7 @@
             
         @show
  
-        <div class="container">
+        <div class="cont container-fluid">
             <nav>
                 @include('menu.menu_admin')
             </nav>
