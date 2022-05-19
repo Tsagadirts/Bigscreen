@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('questions', function (Blueprint $table) {
+            // les colonnes permettant de definir les différent type de données
             $table->id();
             $table->string('title', 100);
             $table->string('body');

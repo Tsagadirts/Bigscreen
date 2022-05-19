@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('surveyeds', function (Blueprint $table) {
+            // les colonnes permettant de definir les différent type de données
             $table->id();
             $table->string('user_email')->unique();
             $table->string('token');

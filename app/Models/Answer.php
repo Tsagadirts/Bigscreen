@@ -12,6 +12,7 @@ class Answer extends Model
     protected $guarded = ['id']; 
 
     public function questions(){
+        // relation belongsTo signifie que chaque question contient une réponse
         return $this->belongsTo(Questions::class);
     }  
     

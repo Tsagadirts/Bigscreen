@@ -4,7 +4,7 @@
 
 <div class="questions">
   <table class="table_questions table table-bordered">
-    <thead class="thead text-center bg-secondary">
+    <thead class="thead text-center">
       <tr >
         <th>Numéros</th>
         <th>Questions</th>

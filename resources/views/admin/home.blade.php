@@ -42,10 +42,10 @@ const data = {
     datasets: [{
     label: '# Marque de casque',
     backgroundColor: [
-    'rgb(255, 99, 132)',
-    'rgb(54, 162, 235)',
-    'rgb(255, 205, 86)',
-    'rgb(255, 25, 41)'
+    'rgb(86, 130, 3)',
+    'rgb(1, 121, 111)',
+    'rgb(222, 49, 99)',
+    'rgb(255, 203, 96)'
     ],
     // on fait a la variable défini dans le controller pour chaque responses
     data: [
@@ -86,12 +86,12 @@ const base = {
     datasets: [{
     label: '',
     backgroundColor: [
-    'rgb(255, 99, 132)',
-    'rgb(54, 162, 235)',
-    'rgb(255, 205, 86)',
-    'rgb(255, 25, 41)',
-    'rgb(127, 255, 212)',
-    'rgb(0, 128, 0)',
+    'rgb(86, 130, 3)',
+    'rgb(1, 121, 111)',
+    'rgb(222, 49, 99)',
+    'rgb(255, 203, 96)',
+    'rgb(112, 41, 99)',
+    'rgb(150, 131, 236)'
 
     ],
     // on fait a la variable défini dans le controller pour chaque responses
@@ -132,10 +132,10 @@ const dat = {
     datasets: [{
     label: '',
     backgroundColor: [
-    'rgb(255, 99, 132)',
-    'rgb(54, 162, 235)',
-    'rgb(255, 205, 86)',
-    'rgb(255, 25, 41)'
+    'rgb(86, 130, 3)',
+    'rgb(1, 121, 111)',
+    'rgb(222, 49, 99)',
+    'rgb(255, 203, 96)'
     ],
     // on fait a la variable défini dans le controller pour chaque responses
     data: [

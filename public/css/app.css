@@ -50,10 +50,12 @@ h1{
     margin-top: 2.7rem;
 }
 .thead{
+    background-color: rgb(40, 81, 133);
     color: #fff;
 }
 .separator{
-    background-color: #616161;
+    background-color: rgb(40, 81, 133);
+    /* background-color: #616161; */
 }
 
 

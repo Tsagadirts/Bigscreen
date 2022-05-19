@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('answers', function (Blueprint $table) {
+            // les colonnes permettant de definir les différent type de données
             $table->id();
             $table->unsignedBigInteger('question_id')->index();
             $table->unsignedBigInteger('surveyed_id');
