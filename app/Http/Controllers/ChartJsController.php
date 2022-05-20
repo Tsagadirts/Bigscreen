@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ChartJsController extends Controller
 {
-<<<<<<< HEAD
+
   public function questions(){
     // on fait appel au questionnaire
     return view('admin.questionaire', ['questions' => Question::all()]);  
@@ -156,7 +156,7 @@ class ChartJsController extends Controller
       'quantity_fifteen' => $quantity_fifteen
     ]);
   }
-=======
+
     public function echart(Request $request)
     {
         $quantity6=['Occulus Rift/s'=>0,
@@ -265,5 +265,4 @@ class ChartJsController extends Controller
              'quantity15'=>$quantity15
          ]);
     }
->>>>>>> 2fe89d7d0903968cbc82e48baef46abfdb2e66fd
 }

@@ -154,11 +154,11 @@ labels: ['1','2','3','4','5'],
         ],
     fill: true,
     backgroundColor: 'rgba(255, 99, 132)',
-    // borderColor: 'rgb(250, 37, 181)',
-    // pointBackgroundColor: 'rgb(245, 67, 145)',
-    // pointBorderColor: '#fff',
-    // pointHoverBackgroundColor: '#fff',
-    // pointHoverBorderColor: 'rgb(245, 67, 145)'
+    borderColor: 'rgb(250, 37, 181)',
+    pointBackgroundColor: 'rgb(245, 67, 145)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(245, 67, 145)'
   }, {
     label: 'Twelve',
     // on fait appel a la variable défini dans le controller pour chaque responses
@@ -171,11 +171,11 @@ labels: ['1','2','3','4','5'],
         ],
     fill: true,
     backgroundColor: 'rgba(54, 162, 235)',
-    // borderColor: 'rgb(54, 162, 235)',
-    // pointBackgroundColor: 'rgb(54, 162, 235)',
-    // pointBorderColor: '#fff',
-    // pointHoverBackgroundColor: '#fff',
-    // pointHoverBorderColor: 'rgb(54, 162, 235)'
+    borderColor: 'rgb(54, 162, 235)',
+    pointBackgroundColor: 'rgb(54, 162, 235)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(54, 162, 235)'
   }, {
     label: 'Thirteen',
     // on fait appel a la variable défini dans le controller pour chaque responses
@@ -188,11 +188,11 @@ labels: ['1','2','3','4','5'],
         ],
     fill: true,
     backgroundColor: 'rgba(255, 205, 86)',
-    // borderColor: 'rgb(18, 188, 106)',
-    // pointBackgroundColor: 'rgb(85, 237, 106)',
-    // pointBorderColor: '#fff',
-    // pointHoverBackgroundColor: '#fff',
-    // pointHoverBorderColor: 'rgb(85, 237, 106)'
+    borderColor: 'rgb(18, 188, 106)',
+    pointBackgroundColor: 'rgb(85, 237, 106)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(85, 237, 106)'
   }, {
     label: 'Fourteen',
     // on fait appel a la variable défini dans le controller pour chaque responses
@@ -205,11 +205,11 @@ labels: ['1','2','3','4','5'],
         ],
     fill: true,
     backgroundColor: 'rgba(255, 25, 41)',
-    // borderColor: 'rgb(155, 91, 13)',
-    // pointBackgroundColor: 'rgb(189, 112, 17)',
-    // pointBorderColor: '#fff',
-    // pointHoverBackgroundColor: '#fff',
-    // pointHoverBorderColor: 'rgb(189, 112, 17)'
+    borderColor: 'rgb(155, 91, 13)',
+    pointBackgroundColor: 'rgb(189, 112, 17)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(189, 112, 17)'
   }, {
     label: 'Fifteen',
     // on fait appel a la variable défini dans le controller pour chaque responses
@@ -222,11 +222,11 @@ labels: ['1','2','3','4','5'],
         ],
     fill: true,
     backgroundColor: 'rgba(127, 255, 212)',
-    // borderColor: 'rgb(71, 63, 63)',
-    // pointBackgroundColor: 'rgb(193, 190, 190)',
-    // pointBorderColor: '#fff',
-    // pointHoverBackgroundColor: '#fff',
-    // pointHoverBorderColor: 'rgb(193, 190, 190)'
+    borderColor: 'rgb(71, 63, 63)',
+    pointBackgroundColor: 'rgb(193, 190, 190)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(193, 190, 190)'
   }]
 };
 
