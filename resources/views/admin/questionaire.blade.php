@@ -11,6 +11,7 @@
         <th>Types</th>
       </tr>
       </thead>
+      {{-- afficher l'id des questions et leurs types avec le foreach dans une table --}}
    @foreach ($questions as $question)
      <tr>
        <td>{{ $question->id }}</</td>

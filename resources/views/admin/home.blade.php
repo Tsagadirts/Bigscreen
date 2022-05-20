@@ -17,7 +17,7 @@
         <canvas class ="w-100 m-2" id="chart_ten"></canvas>
     </div>
         <div class ="bg-light d-flex col-5 graph m-1">
-        <canvas class ="w-100 m-2" id="rad"></canvas>
+        <canvas class ="w-100 m-2" id="radar"></canvas>
     </div>
 </div>
     
@@ -27,7 +27,7 @@
 const ctx = document.getElementById('chart_six');
 const ctx2 = document.getElementById('chart_seven');
 const ctx3 = document.getElementById('chart_ten');
-const ctx4 = document.getElementById('rad');
+const ctx4 = document.getElementById('radar');
 
 // on store les différents réponses a la questions six dans un tableau labels
 const labels = [
@@ -40,7 +40,6 @@ const labels = [
 const data = {
     labels: labels,
     datasets: [{
-    label: '# Marque de casque',
     backgroundColor: [
     'rgb(86, 130, 3)',
     'rgb(1, 121, 111)',
@@ -84,7 +83,6 @@ const value = [
 const base = {
     labels: value,
     datasets: [{
-    label: '',
     backgroundColor: [
     'rgb(86, 130, 3)',
     'rgb(1, 121, 111)',
@@ -130,7 +128,6 @@ const container = [
 const dat = {
     labels: container,
     datasets: [{
-    label: '',
     backgroundColor: [
     'rgb(86, 130, 3)',
     'rgb(1, 121, 111)',
@@ -177,12 +174,7 @@ labels: ['1','2','3','4','5'],
             {{$question_onze['5']}}
         ],
     fill: true,
-    backgroundColor: 'rgba(0, 255, 87, 0.39)',
-    // borderColor: 'rgb(250, 37, 181)',
-    // pointBackgroundColor: 'rgb(245, 67, 145)',
-    // pointBorderColor: '#fff',
-    // pointHoverBackgroundColor: '#fff',
-    // pointHoverBorderColor: 'rgb(245, 67, 145)'
+    backgroundColor: 'rgba(0, 255, 87, 0.39)'
   }, {
     label: 'Douze',
     // on fait appel a la variable défini dans le controller pour chaque responses
@@ -194,12 +186,7 @@ labels: ['1','2','3','4','5'],
             {{$question_douze['5']}}
         ],
     fill: true,
-    backgroundColor: 'rgba(7, 0, 255, 0.24)',
-    // borderColor: 'rgb(54, 162, 235)',
-    // pointBackgroundColor: 'rgb(54, 162, 235)',
-    // pointBorderColor: '#fff',
-    // pointHoverBackgroundColor: '#fff',
-    // pointHoverBorderColor: 'rgb(54, 162, 235)'
+    backgroundColor: 'rgba(7, 0, 255, 0.24)'
   }, {
     label: 'Treize',
     // on fait appel a la variable défini dans le controller pour chaque responses
@@ -211,12 +198,7 @@ labels: ['1','2','3','4','5'],
             {{$question_treize['5']}}
         ],
     fill: true,
-    backgroundColor: 'rgba(255, 194, 0, 0.27)',
-    // borderColor: 'rgb(18, 188, 106)',
-    // pointBackgroundColor: 'rgb(85, 237, 106)',
-    // pointBorderColor: '#fff',
-    // pointHoverBackgroundColor: '#fff',
-    // pointHoverBorderColor: 'rgb(85, 237, 106)'
+    backgroundColor: 'rgba(255, 194, 0, 0.27)'
   }, {
     label: 'Quatorze',
     // on fait appel a la variable défini dans le controller pour chaque responses
@@ -228,12 +210,7 @@ labels: ['1','2','3','4','5'],
             {{$question_quatorze['5']}}
         ],
     fill: true,
-    backgroundColor: 'rgba(255, 124, 0, 0.38)',
-    // borderColor: 'rgb(155, 91, 13)',
-    // pointBackgroundColor: 'rgb(189, 112, 17)',
-    // pointBorderColor: '#fff',
-    // pointHoverBackgroundColor: '#fff',
-    // pointHoverBorderColor: 'rgb(189, 112, 17)'
+    backgroundColor: 'rgba(143, 73, 0, 0.24)'
   }, {
     label: 'Quinze',
     // on fait appel a la variable défini dans le controller pour chaque responses
@@ -245,12 +222,7 @@ labels: ['1','2','3','4','5'],
             {{$question_quinze['5']}}
         ],
     fill: true,
-    backgroundColor: 'rgba(255, 0, 0, 0.38)',
-    // borderColor: 'rgb(71, 63, 63)',
-    // pointBackgroundColor: 'rgb(193, 190, 190)',
-    // pointBorderColor: '#fff',
-    // pointHoverBackgroundColor: '#fff',
-    // pointHoverBorderColor: 'rgb(193, 190, 190)'
+    backgroundColor: 'rgba(255, 0, 0, 0.38)'
   }]
 };
 
@@ -266,7 +238,7 @@ const con = {
         }  
     },
 };
-const rad = new Chart(ctx4, con);
+const radar = new Chart(ctx4, con);
 </script>
 @endsection
 

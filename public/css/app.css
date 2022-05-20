@@ -10,6 +10,7 @@
 .cont{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+/* bigscreen login et register */
 h1{
     font-family:'Times New Roman', Times, serif;
     color: rgb(40, 81, 133);
@@ -17,7 +18,25 @@ h1{
 .big{
     padding-bottom: 2rem;
 }
-
+/* homepage */
+.charts{
+    left: 12rem;
+    top: 3.5rem;
+    position: absolute;
+    height: 0rem;
+    width: 85%;
+}
+/* questionaire et answer admin */
+.questions{    
+    margin-left: 18rem;
+}
+.thead{
+    background-color: #CCD9E2;
+    color: #000;
+}
+.separator{
+    background-color: #CCD9E2;
+}
 /* sidebar admin */
 .menu_admin{
     position: fixed;
@@ -41,26 +60,6 @@ h1{
 }
 .menu_admin button:hover{
     box-shadow: 2px 2px 4px #000000;
-}
-/* homepage */
-.charts{
-    left: 13rem;
-    top: 5.5rem;
-    position: absolute;
-    height: 0rem;
-    width: 85%;
-}
-/* questionaire et answer admin */
-.questions{    
-    margin-left: 18rem;
-}
-.thead{
-    background-color: #CCD9E2;
-    color: #000;
-}
-.separator{
-    background-color: rgb(40, 81, 133);
-    /* background-color: #616161; */
 }
 
 
