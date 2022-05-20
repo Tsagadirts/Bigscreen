@@ -9,8 +9,21 @@ use Illuminate\Http\Request;
 
 class QuestionaireController extends Controller
 {
-    public function sondage(){
+    public function sondage(Request $request){
         
+        // if($request->isMethod('get')){
+        //     return view('users.sondage', ['questions' => Question::all()]);
+        // }else{
+        //     $request->validate([
+        //         'title' => 'required',
+        //         'question_type' => 'required',
+        //         'body' => 'required',
+        //         'option' => 'required',
+        //     ]);
+    
+        //     $question = Question::create($request->all());
+        // }        
+
         return view('users.sondage', ['questions' => Question::all()]);  
     }
 
