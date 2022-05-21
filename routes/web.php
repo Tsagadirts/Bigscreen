@@ -42,11 +42,11 @@ Auth::routes();
 //     return view('home');
 // })->middleware(['auth'])->name('answer');
 
-Route::get('/home', [ChartJsController::class, 'charts'])->name('home');
+Route::get('/home', [ChartJsController::class, 'charts'])->name('home')->middleware('auth');
 
-Route::get('/questionaire', [ChartJsController::class, 'questions'])->name('form');
+Route::get('/questionaire', [ChartJsController::class, 'questions'])->name('form')->middleware('auth');
 
-Route::get('/answer', [ChartJsController::class, 'answers'])->name('answer');
+Route::get('/answer', [ChartJsController::class, 'answers'])->name('answer')->middleware('auth');
 
 
 
