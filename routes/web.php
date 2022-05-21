@@ -35,11 +35,11 @@ Auth::routes();
 // })->middleware(['auth'])->name('home');
 
 // Route::get('/questionaire', [ChartJsController::class, 'questions'], function () {
-//     return view('home');
+//     return view('questions');
 // })->middleware(['auth'])->name('form');
 
 // Route::get('/answer', [ChartJsController::class, 'answers'], function () {
-//     return view('home');
+//     return view('answers');
 // })->middleware(['auth'])->name('answer');
 
 Route::get('/home', [ChartJsController::class, 'charts'])->name('home')->middleware('auth');
