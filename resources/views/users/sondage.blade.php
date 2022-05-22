@@ -26,7 +26,7 @@
             @elseif($question->question_type=='b')
               <div>
                   <label for="{{ $question->id }}" class="form-label">{{ $question->body }}</label>
-                  <input type="text" name="{{ $question->id }}" id="{{ $question->id }}" class="form-control">
+                  <input type="text" name="{{ $question->id }}" id="{{ $question->id }}" class="form-control" required>
               </div>    
             @else
               <div>
@@ -34,7 +34,7 @@
                 @for ($i = 1; $i<=5; $i++)
                   <div class="form-check form-check-inline">
                     <input type="radio" id="{{ $question->id }}"
-                    name="{{ $question->id }}" value="{{$i}}">
+                    name="{{ $question->id }}" value="{{$i}}" required>
                     <label for="{{ $question->id }}">{{$i}}</label>
                   </div>
                 @endfor
@@ -48,8 +48,7 @@
         </form>
       </div>
     </div>
-    
-}
+
   
 
 </section>

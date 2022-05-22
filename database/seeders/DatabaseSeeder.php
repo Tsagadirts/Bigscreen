@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //on fait appelle aux deux seeders Questions et answers
         $this->call([
             QuestionsTableSeeder::class,
             AnswersTableSeeder::class

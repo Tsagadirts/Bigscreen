@@ -12,12 +12,17 @@
         @show
  
         <div class="cont container-fluid">
-            <nav>
-                @include('menu.menu_admin')
-            </nav>
+            
             @include('admin.nav_bar_laravel')
-
-            @yield('content')
+            <div class="row">
+                <nav id="menu_container" class="col-3">
+                    @include('menu.menu_admin')
+                </nav>
+                <div class="col-12 col-md-9">
+                    @yield('content')
+                </div>
+            </div>
+            
         </div>
     </body>
 

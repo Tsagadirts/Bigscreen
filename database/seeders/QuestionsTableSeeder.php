@@ -14,7 +14,7 @@ class QuestionsTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    // les questions sont intègre directement dans la base de données.
+    // créer les 20  questions et les intègrer  dans la base de données.
     {
         Question::create([
             'title' => 'Question 1/20',
