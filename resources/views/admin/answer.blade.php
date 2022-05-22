@@ -12,7 +12,7 @@
       </tr>
     </thead>
     {{-- la boucle affichera les questions et les réponses des utilisateurs pour la parti admin --}}
-      @foreach ($answers as $answer)
+      @foreach ($answers->sortby('id') as $answer)
       <tr>
         {{-- on recupère l'id de la questions --}}
        <td >{{ $questions[$answer->question_id-1]->id }}</td>

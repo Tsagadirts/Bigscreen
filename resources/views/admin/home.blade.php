@@ -6,20 +6,21 @@
 
 {{-- le canvas permet l'affichage des graphes --}}
 {{-- chaques graphe contient un id différent que l'on va ensuite utiliser pour configiurer le graphe --}}
-<div class= "charts d-flex row align-items-center justify-content-center mx-auto">
-    <div class ="bg-light d-flex col-5 graph m-1">
+<div class= "charts">
+    <div class ="bg-light d-flex col-12 col-md-6 graph">
         <canvas class ="w-100 m-2" id="chart_six"></canvas>
     </div>
-        <div class ="bg-light d-flex col-5 graph m-1">
+        <div class ="bg-light d-flex col-12 col-md-6 graph">
         <canvas class ="w-100 m-2" id="chart_seven"></canvas>
     </div>
-        <div class ="bg-light d-flex col-5 graph m-1">
+        <div class ="bg-light d-flex col-12 col-md-6 graph">
         <canvas class ="w-100 m-2" id="chart_ten"></canvas>
     </div>
-        <div class ="bg-light d-flex col-5 graph m-1">
+        <div class ="bg-light d-flex col-12 col-md-6 graph">
         <canvas class ="w-100 m-2" id="radar"></canvas>
     </div>
 </div>
+
     
 <script>
 
