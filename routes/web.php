@@ -30,23 +30,18 @@ Route::get('/result/{token}', [QuestionaireController::class, 'result'])->name('
 
 Auth::routes();
 
-// Route::get('/home', [ChartJsController::class, 'charts'], function () {
-//     return view('home');
-// })->middleware(['auth'])->name('home');
+Route::get('/home', [ChartJsController::class, 'charts'], function () {
+    return view('home');
+})->middleware(['auth'])->name('home');
 
-// Route::get('/questionaire', [ChartJsController::class, 'questions'], function () {
-//     return view('questions');
-// })->middleware(['auth'])->name('form');
+Route::get('/questionaire', [ChartJsController::class, 'questions'], function () {
+    return view('questions');
+})->middleware(['auth'])->name('form');
 
-// Route::get('/answer', [ChartJsController::class, 'answers'], function () {
-//     return view('answers');
-// })->middleware(['auth'])->name('answer');
+Route::get('/answer', [ChartJsController::class, 'answers'], function () {
+    return view('answers');
+})->middleware(['auth'])->name('answer');
 
-Route::get('/home', [ChartJsController::class, 'charts'])->name('home');
-
-Route::get('/questionaire', [ChartJsController::class, 'questions'])->name('form');
-
-Route::get('/answer', [ChartJsController::class, 'answers'])->name('answer');
 
 
 
